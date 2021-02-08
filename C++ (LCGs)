@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    unsigned int x,a,c,m,i,k;
+    
+    cout << "X(n+1) = (X(n)*A + C) mod M" << endl;
+    cout << "Введите А: ";
+    cin >> a;
+    cout << "Введите C: ";
+    cin >> c;
+    cout << "Введите M: ";
+    cin >> m;
+    
+    x=0; 
+    k=1;
+    
+    for(i=0; i<m; i++)
+    {
+        x = ((x * a) + c) % m;
+        cout << "X(" << k++ << ") = " << x << endl;
+    }
+    cout << "И так далее...";
+    return 0;
+}
