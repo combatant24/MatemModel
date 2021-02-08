@@ -7,6 +7,8 @@ int main()
     unsigned int x,a,c,m,i,k,n,s,n1,n2,n3,n4,q;
     
     cout << "X(n+1) = (X(n)*A + C) mod M" << endl;
+    cout << "S = 2111111111*(n-4) + 1492*(n-3) + 1776*(n-2) + 5115*(n-1) + C" << endl;
+    cout << "X(n) = S/2^23" << endl;
     cout << "Введите А: ";
     cin >> a;
     cout << "Введите C: ";
