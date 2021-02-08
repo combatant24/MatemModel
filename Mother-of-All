@@ -1,0 +1,49 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    unsigned int x,a,c,m,i,k,n,s,n1,n2,n3,n4,q;
+    
+    cout << "X(n+1) = (X(n)*A + C) mod M" << endl;
+    cout << "Введите А: ";
+    cin >> a;
+    cout << "Введите C: ";
+    cin >> c;
+    cout << "Введите M: ";
+    cin >> m;
+    cout << "Введите N(в диапазоне от 0 до M): ";
+    cin >> n;
+    
+    x=0; 
+    k=1;
+    
+    for(i=0; i<m; i++)
+    {
+        x = ((x * a) + c) % m;
+            if((n-4)==k)
+            {
+                x = n1;
+            }
+            if((n-3)==k)
+            {
+                x = n2;
+            }
+            if((n-2)==k)
+            {
+                x = n3;
+            }
+            if((n-1)==k)
+            {
+                x = n4;
+            }
+    }
+    
+    s = 2111111111*n1 + 1492*n2 + 1776*n3 + 5115*n4 + c;
+    q = s/pow(2,23);
+    
+    cout << q;
+    
+    return 0;
+}
