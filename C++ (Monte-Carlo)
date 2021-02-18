@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+    double x, y, yp, n, i, tz = 0, tf = 0, s;
+    srand(time(NULL));
+
+    cout << "N = ";
+    cin >> n;
+    cout << endl;
+
+    for (i=1; i <= n; i++) 
+    {
+        x = (double)rand() / (double)RAND_MAX * 8 + 0;
+        cout << "X = " << x << endl;
+
+        y = (double)rand() / (double)RAND_MAX * 8 + 0;
+        cout << "Y = " << y << endl;
+
+        yp = x * 0.25;
+        if (y < yp || y <= 4 && y > 2 && x < 2 || y <= 6 && y > 4 && x < 4 || y > 6 && x < 6)
+        {
+            tz++;
+        }
+        else
+        {
+            tf++;
+        }
+        cout << endl;
+        cout << "figura = " << tf << endl;
+        cout << "fon = " << tz << endl;
+        cout << endl;
+    }
+
+    s = (64 * tf) / (tz + tf);
+
+    cout << "S = " << s << endl;
+
+    system("pause");
+    return 0;
+}
